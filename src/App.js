@@ -1,20 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Main from "./pages/Movies";
+import {RouterProvider} from "react-router-dom";
+import router from "./router";
+
 
 const App = () => {
-
-  const [movies, setMovies] = useState([]);
-
-  const getMovies = async () => {
-
-    const address = ""
-
-  }
-
-    return (
-        <div>
-          
-        </div>
+    return(
+<RouterProvider router={router} />
     );
 };
-
 export default App;
