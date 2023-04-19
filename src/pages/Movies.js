@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Container, Row, Table} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const Movies = () => {
 
@@ -40,16 +41,24 @@ const Movies = () => {
                         <th>개봉일</th>
                         <th>평점</th>
                         <th>추천수</th>
+                        <th>이동하기</th>
                     </tr>
                     </thead>
                     <tbody>
                     {movies && movies.map(m => (
                         <tr>
                             <td>{m.id}</td>
-                            <td>{m.title}</td>
+                            <td>
+                                <Link to={`/movies/${m.id}`}>
+                                    {m.title}
+                                </Link>
+                            </td>
                             <td>{m.release_date}</td>
                             <td>{m.vote_average}</td>
                             <td>{m.vote_count}</td>
+                            <tb><Link to={`/movies/${m.id}`}>
+                                이동
+                            </Link></tb>
                         </tr>
                     ))}
                     </tbody>
