@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import {createBrowserRouter} from "react-router-dom";
 import Movies from "./pages/Movies";
 import News from "./pages/News";
 
-const Router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path : "/",
         element : <Movies />
@@ -14,4 +14,4 @@ const Router = createBrowserRouter([
     }
 ])
 
-export default Router;
+export default router;

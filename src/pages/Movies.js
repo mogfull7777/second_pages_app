@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Container, Row, Table} from "react-bootstrap";
 
-const App = () => {
+const Movies = () => {
 
     const [movies, setMovies] = useState([]);
 
@@ -51,7 +51,6 @@ const App = () => {
                             <td>{m.vote_average}</td>
                             <td>{m.vote_count}</td>
                         </tr>
-
                     ))}
                     </tbody>
                 </Table>
@@ -60,4 +59,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Movies;
